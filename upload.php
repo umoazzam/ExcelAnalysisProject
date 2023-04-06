@@ -1,41 +1,37 @@
 <?php
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_FILES['csvfile']['error'] == 0) {
+        $filename = $_FILES['csvfile']['tmp_name'];
+        $handle = fopen($filename, "r");
 
-// check if file is a csv
-if(isset($_POST["submit"])) {
-  $check = mime_content_type($_FILES["fileToUpload"]["tmp_name"]);
-  if($check == "text/csv") {
-    echo "File is a csv - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not a csv.";
-    $uploadOk = 0;
-  }
-}
-// limit file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-  }
+        $header = true;
+        $data = [];
+        while (($row = fgetcsv($handle, 1000, ",")) !== false) {
+            if ($header) {
+                $header = false;
+            } else {
+                $data[] = $row;
+            }
+        }
 
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-  }
+        fclose($handle);
 
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-  // if everything is ok, try to upload file
-  } else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+        $averages = array_fill(0, count($data[0]), 0);
+
+        foreach ($data as $row) {
+            foreach ($row as $index => $value) {
+                $averages[$index] += $value;
+            }
+        }
+
+        $num_rows = count($data);
+        foreach ($averages as &$avg) {
+            $avg = $avg / $num_rows;
+        }
+
+        echo json_encode($averages);
     } else {
-      echo "Sorry, there was an error uploading your file.";
+        echo "Error uploading file.";
     }
-  }
+}
 ?>
