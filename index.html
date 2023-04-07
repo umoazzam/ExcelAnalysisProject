@@ -8,12 +8,14 @@
   <body>
     <h1>Upload a file</h1>
     <p>The file uploaded must be of type .csv to undergo analysis.</p>
+    <!--Upload function-->
     <form action="upload.php" method="POST" enctype="multipart/form-data">
       <label for="csvfile">Filename:</label>
       <input type="file" name="csvfile" id="csvfile"><br>
       <input type="submit" name="submit" value="Upload CSV">
     </form>
     <br>
+    <!--Table to display average values-->
     <h2>Average Values</h2>
     <table id="averages"></table>
     <br>
