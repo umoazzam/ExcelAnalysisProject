@@ -1,4 +1,3 @@
-
 const form = document.querySelector('form');
 form.addEventListener('submit', e => {
     // handles the form submission and sends the uploaded file to the upload.php file for processing
