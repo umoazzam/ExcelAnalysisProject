@@ -33,7 +33,13 @@ put explanation here
 
 ## Screenshots
 
-put screenshots and captions here
+Image 1: Initial Upload Page
+
+![Image 1: Initial Upload Page](/img/InitialUploadPage.png)
+
+Image 2: Populated Table
+
+![Image 1: Initial Upload Page](/img/InitialUploadPage.png)
 
 ## Peer Review
 
