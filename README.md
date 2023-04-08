@@ -39,4 +39,4 @@ Image 1: Initial Upload Page
 
 ## Peer Review
 
-ask sarah for peer review here
+Pending review from student Sarah Kugelmas
