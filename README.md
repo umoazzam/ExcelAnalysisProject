@@ -29,7 +29,7 @@ The script.js file contains the code responsible for accepting the csv file and 
 
 ### upload.php
 
-put explanation here
+The upload.php file contains all code responsible for data analysis. The PHP receives the csv file from script.js, and then extracts averages from the numerical columns, and then packages them in JSON format to be sent back to script.js.
 
 ## Screenshots
 
