@@ -21,11 +21,11 @@ Other features that would improve the usefulness of this project include:
 
 ### index.html
 
-The index.html contains the html code, which is responsible for genersting the form for uploading the csv. Once the csv has been uploaded, the html file passes the file to the javascript file, script.js. Once the JS and PHP files have calculated the averages, the averages are passed back to the html for table population.
+The index.html file contains the html code, which is responsible for genersting the form for uploading the csv. Once the csv has been uploaded, the html file passes the file to the javascript file, script.js. Once the JS and PHP files have calculated the averages, the averages are passed back to the html for table population.
 
 ### script.js
 
-put explanation here
+The script.js file contains the code responsible for accepting the csv file and running any necessary checks, and then passing the csv file to the PHP file for analysis. Once the file has been analyzed for its averages, the JS file receives the averages in JSON format, which it sends back to index.html.
 
 ### upload.php
 
