@@ -39,4 +39,15 @@ Image 1: Initial Upload Page
 
 ## Peer Review
 
-Pending review from student Sarah Kugelmas
+Author: Sarah Kugelmas
+
+Pros:
+  The concept seems incredibly useful for big data sets, I've been looking at large CSV files this semester in CSDS 351 Intro to Data Engineering and this would have been so helpful for data analysis.
+  The fact that it looks at the different columns and automatically gives insight on the numerical data columns is also great, but would be even better if the user was allowed to select which columns to analyze or which analysis tasks to perform, which Usman mentioned as a mentioned potential future feature. Allowing users to customize the results they're getting would just be a nicer user-experience.
+
+Cons:
+  The website is very barebones, but could easily be made to look more aethetically pleasing.
+  Although useful already, adding the additional feature of allowing users to select which columns to analyze or which analysis tasks to perform would make this page a lot more realistically usable.
+  Functionality is pretty simple with the operations the program can do, but Usman addressed this by including in his other features: added support for more complex data analysis tasks, such as performing statistical tests or running predictive machine algorithms to allow the user to create projections.
+
+Overall, it's pretty simple right now but it is an interesting idea and I can see it has the potential become even more useful.
