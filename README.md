@@ -37,6 +37,10 @@ Image 1: Initial Upload Page
 
 ![Image 1: Initial Upload Page](/img/InitialUploadPage.png)
 
+Image 2: Results (Average Values Populated)
+
+![Image 2: Initial Upload Page](/img/WorkingScreenshot.png)
+
 ## Peer Review
 
 Author: Sarah Kugelmas
